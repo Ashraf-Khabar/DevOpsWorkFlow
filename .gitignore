@@ -1,0 +1,7 @@
+# Building app
+client/node_modules
+
+# Testing app
+tests/log.html
+tests/output.xml
+tests/report.html
