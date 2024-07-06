@@ -9,7 +9,7 @@ run_tests:
         - python3 tests/main.py
 
 build_image:
-    image: docker:30.0.0
+    image: docker
     services:
         - docker:20.10.16-dind
     script:
