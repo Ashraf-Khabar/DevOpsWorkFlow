@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-07-06T23:01:31.840647" rpa="false" schemaversion="5">
+<suite id="s1" name="00 Search For Element &amp; 01 Add Item To Cart">
+<suite id="s1-s1" name="00 Search For Element" source="C:\Users\khaba\OneDrive\Bureau\DevSecOps\react app building\store_app.\tests\test_cases\00_search_for_element.robot">
+<test id="s1-s1-t1" name="Open The Store" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-06T23:01:32.461154" level="INFO">Opening browser 'headlessfirefox' to base url 'http://localhost:8080/'.</msg>
+<msg time="2024-07-06T23:02:01.085235" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-07-06T23:02:01.086751" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${host}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-07-06T23:01:32.461154" elapsed="28.768882">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.230036" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.233244" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-06T23:01:32.459385" elapsed="28.773859">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t2" name="Search For Element In The Store" line="17">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${search_bar}</arg>
+<arg>${item_to_look_For}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-06T23:02:01.236976" elapsed="0.002177">Execution terminated by signal</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${long_delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.239153" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${result}</var>
+<arg>Element Should Contain</arg>
+<arg>${name_of_item}</arg>
+<arg>${item_to_look_For}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${result} == ${True}">
+<kw name="Pass Execution" owner="BuiltIn">
+<arg>message : element founded.</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>error : element not found.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.245777" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.003024"/>
+</branch>
+<status status="NOT RUN" start="2024-07-06T23:02:01.242753" elapsed="0.003024"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.245777" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" start="2024-07-06T23:02:01.245777" elapsed="0.000000"/>
+</kw>
+<doc>Search For Element In The Store</doc>
+<status status="FAIL" start="2024-07-06T23:02:01.235369" elapsed="0.010408">Execution terminated by signal</status>
+</test>
+<status status="FAIL" start="2024-07-06T23:01:31.919653" elapsed="29.326124"/>
+</suite>
+<suite id="s1-s2" name="01 Add Item To Cart" source="C:\Users\khaba\OneDrive\Bureau\DevSecOps\react app building\store_app.\tests\test_cases\01_add_item_to_cart.robot">
+<test id="s1-s2-t1" name="Open The Store" line="10">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-07-06T23:02:01.254385" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t2" name="Add Element To The Cart" line="15">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-07-06T23:02:01.256589" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2024-07-06T23:02:01.245777" elapsed="0.014841"/>
+</suite>
+<status status="FAIL" start="2024-07-06T23:01:31.847570" elapsed="29.415236"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+</tag>
+<suite>
+<stat pass="0" fail="4" skip="0" id="s1" name="00 Search For Element &amp; 01 Add Item To Cart">00 Search For Element &amp; 01 Add Item To Cart</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="00 Search For Element">00 Search For Element &amp; 01 Add Item To Cart.00 Search For Element</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s2" name="01 Add Item To Cart">00 Search For Element &amp; 01 Add Item To Cart.01 Add Item To Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

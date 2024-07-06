@@ -1,7 +1,7 @@
 import os
 from robot import run
 
-test_dir = './test_cases'
+test_dir = os.getcwd()+'./tests/test_cases'
 
 print(f"Current working directory: {os.getcwd()}")
 
