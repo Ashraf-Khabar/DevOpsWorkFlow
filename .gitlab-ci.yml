@@ -19,5 +19,5 @@ build_image:
     before_script:
         - docker login -u $REGESTRY_USER -p $REGESTRY_PASS
     script:
-        - docker buildx build -t $IMAGE_NAME:$IMAGE_TAG /lient
+        - docker build -t $IMAGE_NAME:$IMAGE_TAG ./client
         - docker push $IMAGE_NAME:$IMAGE_TAG
