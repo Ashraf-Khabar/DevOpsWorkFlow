@@ -1,3 +1,7 @@
+variables:
+    IMAGE_NAME: docker push akaax/ashraf_repo
+    IMAGE_TAG: python
+
 run_tests:
     image: python:3
     before_script:
@@ -12,5 +16,8 @@ build_image:
     image: docker
     services:
         - docker:20.10.16-dind
+    before_script:
+        - docker login -u $REGESTRY_USER -p REGESTRY_PASS
     script:
-        - docker-compose up
+        - docker build -t docker push $IMAGE_NAME:$IMAGE_TAG ./client
+        - docker push $IMAGE_NAME:$IMAGE_TAG
