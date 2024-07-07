@@ -2,7 +2,12 @@ variables:
     IMAGE_NAME: docker push akaax/ashraf_repo
     IMAGE_TAG: python
 
+stages:
+    - test
+    - build
+
 run_tests:
+    stage: test
     image: python:3
     before_script:
         - apt-get update
@@ -13,6 +18,7 @@ run_tests:
         - python3 tests/main.py
 
 build_image:
+    stage: build
     image: docker
     services:
         - docker:20.10.16-dind
