@@ -1,7 +1,15 @@
 # Building app
 client/node_modules
 
+
 # Testing app
 tests/log.html
 tests/output.xml
 tests/report.html
+
+
+# Results of testing should not be pushed 
+geckodriver-1.log
+log.html
+output.xml
+report.html
