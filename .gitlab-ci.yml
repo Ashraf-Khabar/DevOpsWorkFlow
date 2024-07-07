@@ -17,7 +17,7 @@ build_image:
     services:
         - docker:20.10.16-dind
     before_script:
-        - docker login -u $REGESTRY_USER -p REGESTRY_PASS
+        - docker login -u $REGESTRY_USER -p $REGESTRY_PASS
     script:
         - docker build -t docker push $IMAGE_NAME:$IMAGE_TAG ./client
         - docker push $IMAGE_NAME:$IMAGE_TAG
