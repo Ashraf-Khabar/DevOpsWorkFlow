@@ -1,5 +1,5 @@
 variables:
-    IMAGE_NAME: docker push akaax/ashraf_repo
+    IMAGE_NAME: akaax/ashraf_repo
     IMAGE_TAG: python
 
 stages:
@@ -13,13 +13,13 @@ run_tests:
         - apt-get update
         - apt-get install -y firefox-esr
         - apt-get install -y xvfb
-        - pip3 install robotframework robotframework-seleniumlibrary  --break-system-packages
+        - pip3 install robotframework robotframework-seleniumlibrary --break-system-packages
     script:
         - python3 tests/main.py
 
 build_image:
     stage: build
-    image: docker
+    image: docker:20.10.16
     services:
         - docker:20.10.16-dind
     before_script:
