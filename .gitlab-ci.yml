@@ -1,6 +1,6 @@
 variables:
     IMAGE_NAME: akaax/ashraf_repo
-    IMAGE_TAG: python
+    IMAGE_TAG: node
 
 stages:
     - test
