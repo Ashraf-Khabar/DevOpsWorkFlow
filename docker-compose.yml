@@ -8,3 +8,8 @@ services:
       context: ./client
     ports:
       - 8080:80
+  tests:
+    container_name: tests_c
+    image: tests_i
+    build:
+      context: ./tests
